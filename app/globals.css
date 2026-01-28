@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  /* Calm Palette */
+  --color-calm-50: #faf9f6;
+  /* Off White Background */
+  --color-calm-100: #f4f1ea;
+  --color-calm-200: #e6e2d8;
+  --color-calm-800: #2f3e46;
+  /* Dark Slate Text */
+
+  /* Sage Palette */
+  --color-sage-50: #f4f7f5;
+  --color-sage-100: #e3ebe6;
+  --color-sage-200: #c5d6cc;
+  --color-sage-300: #a3beb0;
+  --color-sage-400: #84a995;
+  --color-sage-500: #69927d;
+  --color-sage-600: #52796f;
+  --color-sage-700: #3f5d56;
+  --color-sage-800: #2f4540;
+  --color-sage-900: #202f2c;
+
+  --color-sand-500: #e6beae;
+  /* Accent/Warmth */
+
+  --background: var(--color-calm-50);
+  --foreground: var(--color-calm-800);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-jakarta);
+  --font-heading: var(--font-outfit);
+
+  --color-calm-50: var(--color-calm-50);
+  --color-calm-100: var(--color-calm-100);
+  --color-calm-200: var(--color-calm-200);
+  --color-sage-50: var(--color-sage-50);
+  --color-sage-100: var(--color-sage-100);
+  --color-sage-200: var(--color-sage-200);
+  --color-sage-300: var(--color-sage-300);
+  --color-sage-400: var(--color-sage-400);
+  --color-sage-500: var(--color-sage-500);
+  --color-sage-600: var(--color-sage-600);
+  --color-sage-700: var(--color-sage-700);
+  --color-sage-800: var(--color-sage-800);
+  --color-sage-900: var(--color-sage-900);
+  --color-sand-500: var(--color-sand-500);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-calm-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sage-300);
+  border-radius: 5px;
+  border: 2px solid var(--color-calm-100);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sage-500);
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+}
+
+.glass-nav {
+  background: rgba(253, 251, 247, 0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(132, 169, 140, 0.1);
+}
+
+.premium-button {
+  background: linear-gradient(135deg, var(--color-sage-700) 0%, var(--color-sage-600) 100%);
+  box-shadow: 0 4px 12px rgba(82, 121, 111, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(82, 121, 111, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+}
+
+/* Logo depth effects */
+.logo-depth {
+  filter: drop-shadow(0 4px 8px rgba(82, 121, 111, 0.3)) drop-shadow(0 2px 4px rgba(82, 121, 111, 0.2));
+  transition: all 0.3s ease;
+}
+
+.logo-depth:hover {
+  filter: drop-shadow(0 8px 16px rgba(82, 121, 111, 0.4)) drop-shadow(0 4px 8px rgba(82, 121, 111, 0.3));
+  transform: translateY(-2px);
+}
+
+/* Soft Scroll for page sections */
+html {
+  scroll-behavior: smooth;
+}
