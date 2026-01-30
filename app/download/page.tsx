@@ -96,7 +96,7 @@ export default function DownloadPage() {
                             </div>
 
                             <a
-                                href="/Delumie-Setup.exe"
+                                href="/Delumie-Setup-0.1.0.exe"
                                 download
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#2f4540] text-white rounded-xl font-bold text-lg hover:bg-[#202f2c] transition-all shadow-xl shadow-[#52796f]/20 active:scale-95"
                             >
@@ -300,4 +300,5 @@ export default function DownloadPage() {
         </div>
     );
 }
+
 
