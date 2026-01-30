@@ -150,7 +150,7 @@ export default function DownloadPage() {
                             <div className="flex-shrink-0 w-10 h-10 bg-[#52796f] text-white rounded-full flex items-center justify-center font-bold">1</div>
                             <div>
                                 <h3 className="font-bold text-lg mb-2">Download the Installer</h3>
-                                <p className="text-slate-600">Click the download button above. The file <code className="bg-slate-100 px-2 py-1 rounded text-sm">Delumie-Setup.exe</code> will be saved to your Downloads folder.</p>
+                                <p className="text-slate-600">Click the download button above. The file <code className="bg-slate-100 px-2 py-1 rounded text-sm">Delumie-Setup-0.1.0.exe</code> will be saved to your Downloads folder.</p>
                             </div>
                         </div>
 
@@ -300,3 +300,4 @@ export default function DownloadPage() {
         </div>
     );
 }
+
