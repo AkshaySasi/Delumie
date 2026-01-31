@@ -113,23 +113,23 @@ export default function DownloadPage() {
                             <ul className="space-y-2 text-sm text-slate-600">
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#52796f] mt-1">•</span>
-                                    <span>Windows 10 (build 1903+) or Windows 11</span>
+                                    <span>Windows 10/11 (64-bit)</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#52796f] mt-1">•</span>
-                                    <span>64-bit processor</span>
+                                    <span><strong>GPU:</strong> NVIDIA 4GB+ VRAM Recommended</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#52796f] mt-1">•</span>
-                                    <span>Minimum 4GB RAM (8GB recommended)</span>
+                                    <span><strong>RAM:</strong> 8GB Min / 16GB Recommended</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#52796f] mt-1">•</span>
-                                    <span>2GB free disk space</span>
+                                    <span><strong>Storage:</strong> 10GB free space (SSD pref)</span>
                                 </li>
                                 <li className="flex items-start gap-2">
                                     <span className="text-[#52796f] mt-1">•</span>
-                                    <span>Internet for initial AI model download</span>
+                                    <span>Active Internet (for initial setup)</span>
                                 </li>
                             </ul>
                         </div>
