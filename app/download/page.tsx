@@ -96,13 +96,23 @@ export default function DownloadPage() {
                             </div>
 
                             <a
-                                href="/Delumie-Setup-0.1.0.exe"
-                                download
+                                href="https://github.com/AkshaySasi/Delumie/releases/latest/download/Delumie-Setup-0.1.0.exe"
                                 className="inline-flex items-center gap-3 px-8 py-4 bg-[#2f4540] text-white rounded-xl font-bold text-lg hover:bg-[#202f2c] transition-all shadow-xl shadow-[#52796f]/20 active:scale-95"
                             >
                                 <Download size={24} />
                                 Download for Windows
                             </a>
+                            <p className="mt-3 text-xs text-slate-400">
+                                or{" "}
+                                <a
+                                    href="https://github.com/AkshaySasi/Delumie/releases"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-[#52796f] underline hover:text-[#3f5d56]"
+                                >
+                                    view all releases on GitHub
+                                </a>
+                            </p>
                         </div>
 
                         <div className="flex-1 bg-slate-50 rounded-2xl p-6">
