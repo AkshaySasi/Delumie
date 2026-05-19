@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Color tokens (light + dark) ─────────────────────────────────────────── */
+:root {
+  font-family: 'Plus Jakarta Sans', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  --bg:           #FAF9F6;
+  --surface:      #FFFFFF;
+  --surface-2:    #F4F7F5;
+  --border:       #E5E7EB;
+  --text:         #1e293b;
+  --text-muted:   #64748b;
+  --sage:         #52796f;
+  --sage-light:   #E3EBE6;
+  --user-bubble:  #52796f;
+  --user-text:    #ffffff;
+  --ai-bubble:    #ffffff;
+  --ai-text:      #334155;
+
+  --glass-bg:     rgba(255,255,255,0.7);
+  --glass-border: rgba(255,255,255,0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(31,38,135,0.07);
+}
+
+.dark {
+  --bg:           #0f1614;
+  --surface:      #1a2421;
+  --surface-2:    #1f2e2a;
+  --border:       #2a3b36;
+  --text:         #e2eae7;
+  --text-muted:   #7a9e94;
+  --sage:         #69927d;
+  --sage-light:   #1f2e2a;
+  --user-bubble:  #3f5d56;
+  --user-text:    #e8f0ee;
+  --ai-bubble:    #1a2421;
+  --ai-text:      #c8dbd6;
+
+  --glass-bg:     rgba(26,36,33,0.85);
+  --glass-border: rgba(255,255,255,0.06);
+  --glass-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  overflow: hidden; /* desktop app — no body scroll */
+}
+
+/* ── Glassmorphism ────────────────────────────────────────────────────────── */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+}
+
+.glass-input {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: all 0.3s ease;
+}
+.dark .glass-input {
+  background: rgba(26,36,33,0.6);
+  border-color: rgba(255,255,255,0.08);
+  color: var(--text);
+}
+.glass-input:focus {
+  background: rgba(255,255,255,0.85);
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(82,121,111,0.15);
+}
+.dark .glass-input:focus {
+  background: rgba(31,46,42,0.9);
+}
+
+/* ── Logo depth ───────────────────────────────────────────────────────────── */
+.logo-depth {
+  filter: drop-shadow(0 4px 8px rgba(82,121,111,0.3))
+          drop-shadow(0 2px 4px rgba(82,121,111,0.2));
+  transition: all 0.3s ease;
+}
+.logo-depth:hover {
+  filter: drop-shadow(0 8px 16px rgba(82,121,111,0.4))
+          drop-shadow(0 4px 8px rgba(82,121,111,0.3));
+  transform: translateY(-2px);
+}
+.logo-depth-strong {
+  filter: drop-shadow(0 8px 16px rgba(82,121,111,0.4))
+          drop-shadow(0 4px 8px rgba(82,121,111,0.25))
+          drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+/* ── Animations ───────────────────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+
+/* ── Blob pulse (onboarding background) ───────────────────────────────────── */
+@keyframes blobPulse {
+  0%, 100% { transform: scale(1) translate(0px, 0px); }
+  50%       { transform: scale(1.1) translate(20px, -20px); }
+}
+.blob-pulse       { animation: blobPulse 9s ease-in-out infinite; }
+.blob-pulse-delay { animation: blobPulse 11s ease-in-out infinite reverse; }
+
+/* ── Scrollbar ────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
