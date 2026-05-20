@@ -17,8 +17,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"
-          cache-dependency-path: app/package-lock.json
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
@@ -30,7 +28,7 @@ jobs:
 
       - name: Install frontend deps
         working-directory: app
-        run: npm ci
+        run: npm install
 
       - name: Build Tauri app (Windows)
         uses: tauri-apps/tauri-action@v0
@@ -70,8 +68,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: "npm"
-          cache-dependency-path: app/package-lock.json
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
@@ -85,7 +81,7 @@ jobs:
 
       - name: Install frontend deps
         working-directory: app
-        run: npm ci
+        run: npm install
 
       - name: Build Tauri app (macOS universal)
         uses: tauri-apps/tauri-action@v0
